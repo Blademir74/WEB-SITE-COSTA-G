@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COSTA G | Constructora e Inmobiliaria | Proyectos Nacionales e Internacionales</title>
+    <meta name="description" content="Constructora e inmobiliaria con 30+ años. Proyectos residenciales, comerciales e industriales. Consultoría en construcción a nivel nacional e internacional." />
+    
+    <!-- Google Fonts: Montserrat (Headers) & Open Sans (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config for COSTA G Design System -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              costa: {
+                sky: '#87CEEB',    // Azul cielo - Primario
+                navy: '#1A3A52',   // Azul marino - Secundario
+                gold: '#D4AF37',   // Dorado - Acento
+                lime: '#32CD32',   // Verde - Bio
+                light: '#F0F8FF',  // Fondo claro (New)
+                dark: '#1A1A1A',   // Texto principal (New)
+                charcoal: '#333333',
+                slate: '#F8FAFC', 
+              }
+            },
+            fontFamily: {
+              sans: ['Open Sans', 'sans-serif'],
+              display: ['Montserrat', 'sans-serif'],
+            },
+            boxShadow: {
+              'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+              'floating': '0 10px 40px -10px rgba(26, 58, 82, 0.15)',
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Custom CSS Components Layer -->
+    <style type="text/tailwindcss">
+      @layer components {
+        .btn-primary {
+          @apply bg-costa-navy text-white px-8 py-3 rounded font-bold hover:bg-costa-sky hover:text-costa-navy transition-all duration-300 shadow-lg;
+        }
+        .btn-secondary {
+          @apply bg-transparent border-2 border-costa-navy text-costa-navy px-8 py-3 rounded font-bold hover:bg-costa-navy hover:text-white transition-all duration-300;
+        }
+        .btn-accent {
+          @apply bg-costa-gold text-white px-8 py-3 rounded font-bold hover:bg-costa-navy transition-all duration-300 shadow-lg;
+        }
+      }
+      
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ccc; 
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #1A3A52; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.1",
+    "mongoose": "https://aistudiocdn.com/mongoose@^9.0.1",
+    "@prisma/client": "https://aistudiocdn.com/@prisma/client@^7.1.0",
+    "next/": "https://aistudiocdn.com/next@^16.0.7/",
+    "jsonwebtoken": "https://aistudiocdn.com/jsonwebtoken@^9.0.3",
+    "bcryptjs": "https://aistudiocdn.com/bcryptjs@^3.0.3",
+    "next": "https://aistudiocdn.com/next@^16.0.7",
+    "tailwindcss": "https://aistudiocdn.com/tailwindcss@^4.1.17",
+    "next-auth": "https://aistudiocdn.com/next-auth@^4.24.5",
+    "next-auth/react": "https://aistudiocdn.com/next-auth@^4.24.5/react",
+    "next-auth/providers/credentials": "https://aistudiocdn.com/next-auth@^4.24.5/providers/credentials",
+    "next-auth/": "https://aistudiocdn.com/next-auth@^4.24.13/"
+  }
+}
+</script>
+</head>
+  <body class="bg-white text-costa-charcoal antialiased font-sans">
+    <div id="root"></div>
+  </body>
+</html>
