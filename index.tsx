@@ -14,3 +14,4 @@
 //     <App />
 //   </React.StrictMode>
 // );
+export {}; // Make it a module to avoid TS errors
