@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // 'standalone' creates a smaller folder ideal for hosting on VPS or Docker
+  output: 'standalone',
   images: {
     remotePatterns: [
       {
@@ -15,8 +17,11 @@ const nextConfig = {
         hostname: 'www.transparenttextures.com',
       }
     ],
+    // If you are forcing a static export, uncomment the line below, 
+    // BUT NOTE: API routes and Login will fail in static export.
+    // unoptimized: true,
   },
-  // Ignore TS/ESLint errors in legacy files during migration to prevent build failure
+  // Ignore errors to ensure the build completes even with legacy code present
   typescript: {
     ignoreBuildErrors: true,
   },
